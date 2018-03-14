@@ -1,10 +1,26 @@
-import * as React from 'react';
-import './App.css';
+import * as React from "react";
+import "./App.css";
+import { Person } from "./Entities/Person";
 
-const logo = require('./logo.svg');
+
+const logo = require("./logo.svg");
+const baseURL = "me.json";
+
+
+const fetchMembersAsync = (): Promise<Person[]> => {
+  return fetch(baseURL)
+    .then((response) => (response.json()));
+};
+
 
 class App extends React.Component {
+
   render() {
+    fetchMembersAsync()
+      .then((me) => {
+        console.log(me);
+    });
+
     return (
       <div className="App">
         <header className="App-header">
@@ -20,3 +36,8 @@ class App extends React.Component {
 }
 
 export default App;
+
+
+
+
+  
