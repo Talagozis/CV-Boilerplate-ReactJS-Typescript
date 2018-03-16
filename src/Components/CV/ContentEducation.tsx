@@ -5,7 +5,7 @@ import { Education } from "../../Entities/Education";
 class ContentEducation extends React.Component<Education[], Education[]> {
     constructor(educations: Education[]) {
         super(educations);
-        this.state = educations;
+        this.state = Object.keys(educations).map((k) => educations[k]);
     }
     public render() {
         return (
@@ -27,7 +27,6 @@ class ContentEducation extends React.Component<Education[], Education[]> {
                     </div>
                     <div className="col-md-1 bg1 timeline-space full-height hidden-sm hidden-xs"/>
                 </div>
-
                 {this.state.map(education =>
                     <div className="line row" key={education.title}>
                         <div className="col-md-1 bg1 timeline-space full-height hidden-sm hidden-xs"/>
@@ -52,13 +51,13 @@ class ContentEducation extends React.Component<Education[], Education[]> {
                                     <strong>{education.thesisTitle}</strong>
                                 </p>
                                 <p>Projects:</p>
-                                <ul className="" style={{"padding-left": "40px", "margin-bottom": "20px"}}>
+                                <ul className="" style={{"paddingLeft": "40px", "marginBottom": "20px"}}>
                                     {education.projects.map(project =>
                                         <li key={project.name}>{project.name}</li>
                                     )}
                                 </ul>
                                 <p>Main courses:</p>
-                                <ul className="" style={{"padding-left": "40px", "margin-bottom": "20px"}}>
+                                <ul className="" style={{"paddingLeft": "40px", "marginBottom": "20px"}}>
                                     {education.mainCourses.map(mainCourse =>
                                         <li key={mainCourse.name}>{mainCourse.name}</li>
                                     )}

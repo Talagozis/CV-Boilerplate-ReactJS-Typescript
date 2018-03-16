@@ -3,11 +3,12 @@ import { Person } from "../../Entities/Person";
 import ContentEducation from "./ContentEducation";
 import ContentWorkExperience from "./ContentWorkExperience";
 import ContentProfileInfo from "./ContentProfileInfo";
-import ContentSkill from "./ContentSkill";
-import ContentInterest from "./ContentInterest";
-import ContentPortfolio from "./ContentPortfolio";
-import ContentContact from "./ContentInterest.1";
+// import ContentSkill from "./ContentSkill";
+// import ContentInterest from "./ContentInterest";
+// import ContentPortfolio from "./ContentPortfolio";
+import ContentContact from "./ContentContact";
 
+const imageSrc = require("../img/avatar.jpg");
 
 class Content extends React.Component<Person, Person> {
     constructor(person: Person) {
@@ -52,7 +53,7 @@ class Content extends React.Component<Person, Person> {
                         <div className="col-md-4 profile-col">
                             <div className="profile-pic">
                                 <div className="profile-border">
-                                    <img src="images/cv-avatar.jpg" alt=""/>
+                                    <img src={imageSrc} alt=""/>
                                 </div>          
                             </div>
                         </div>
@@ -94,12 +95,13 @@ class Content extends React.Component<Person, Person> {
 
                             <ContentWorkExperience {... this.state.workExperience} />
 
+                            {/*
                             <ContentSkill {... this.state.skills} />
 
                             <ContentInterest {... this.state.interests} />
 
                             <ContentPortfolio {... this.state.portfolios} />          
-
+                            */}
                             <ContentContact />
 
 

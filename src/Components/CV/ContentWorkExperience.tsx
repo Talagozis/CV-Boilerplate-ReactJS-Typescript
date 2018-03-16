@@ -5,7 +5,7 @@ import { WorkExperience } from "../../Entities/WorkExperience";
 class ContentWorkExperience extends React.Component<WorkExperience[], WorkExperience[]> {
     constructor(workExperiences: WorkExperience[]) {
         super(workExperiences);
-        this.state = workExperiences;
+        this.state = Object.keys(workExperiences).map((k) => workExperiences[k]);
     }
     public render() {  
         return (
@@ -46,21 +46,21 @@ class ContentWorkExperience extends React.Component<WorkExperience[], WorkExperi
                                                     {new Intl.DateTimeFormat("en-GB", { 
                                                         month: "long",
                                                         year: "numeric", 
-                                                    }).format(workExperience.startDate)}
+                                                    }).format(new Date(workExperience.startDate))}
                                                 </span>
                                                 - 
                                                 <span>
                                                     {workExperience.endDate != null ? new Intl.DateTimeFormat("en-GB", { 
                                                         month: "long",
                                                         year: "numeric", 
-                                                    }).format(workExperience.endDate) : "Current"}
+                                                    }).format(new Date(workExperience.endDate)) : "Current"}
                                                 </span>
                                             </span>
                                         </h4>
                                         <div className="job-description">
-                                            <p>@workExperience.description</p>
+                                            <p>{workExperience.description}</p>
                                             <p>Projects:</p>
-                                            <ul className="" style={{"padding-left": "40px", "margin-bottom": "20px"}}>
+                                            <ul className="" style={{"paddingLeft": "40px", "marginBottom": "20px"}}>
                                                 {workExperience.projects.map(project =>
                                                     <li key={project.name}>{project.name}</li>
                                                 )}

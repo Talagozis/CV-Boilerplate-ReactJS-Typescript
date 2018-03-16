@@ -2,9 +2,6 @@ import * as React from "react";
 
 
 class ContentContact extends React.Component {
-    constructor() {
-        super({});
-    }
     public render() {
         return (
             <section className="timeline" id="contact">

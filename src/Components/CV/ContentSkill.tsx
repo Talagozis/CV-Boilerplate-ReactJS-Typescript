@@ -58,7 +58,7 @@ class ContentSkill extends React.Component<Skill[], Skill[]> {
                             </li>
                             <li>
                                 <div className="progress" title="Doing my best!">
-                                    <div className="progress-bar progress-bar-3" role="progressbar" data-percent="85%" style={{"width": "85%;"}}>
+                                    <div className="progress-bar progress-bar-3" role="progressbar" data-percent="85%" style={{"width": "85%"}}>
                                         <span className="sr-only">85% Complete</span>
                                     </div>
                                     <span className="progress-type">Confidence</span>
@@ -82,7 +82,7 @@ class ContentSkill extends React.Component<Skill[], Skill[]> {
                             <ul className="skills-list">
                                 <li>
                                     <div className="progress">
-                                        <div className="progress-bar" data-percent="85%" role="progressbar" style={{"width": "85%;"}}>
+                                        <div className="progress-bar" data-percent="85%" role="progressbar" style={{"width": "85%"}}>
                                             <span className="sr-only">85% Complete</span>
                                         </div>
                                         <span className="progress-type">Adobe Photoshop</span>
@@ -91,7 +91,7 @@ class ContentSkill extends React.Component<Skill[], Skill[]> {
                                 </li>
                                 <li>
                                     <div className="progress">
-                                        <div className="progress-bar progress-bar-2" data-percent="90%" role="progressbar" style={{"width": "90%;"}}>
+                                        <div className="progress-bar progress-bar-2" data-percent="90%" role="progressbar" style={{"width": "90%"}}>
                                             <span className="sr-only">90% Complete</span>
                                         </div>
                                         <span className="progress-type">Adobe Illustrator</span>
@@ -100,7 +100,7 @@ class ContentSkill extends React.Component<Skill[], Skill[]> {
                                 </li>
                                 <li>
                                     <div className="progress">
-                                        <div className="progress-bar progress-bar-3" data-percent="40%" role="progressbar" style={{"width": "40%;"}}>
+                                        <div className="progress-bar progress-bar-3" data-percent="40%" role="progressbar" style={{"width": "40%"}}>
                                             <span className="sr-only">40% Complete</span>
                                         </div>
                                         <span className="progress-type">Adobe Fireworks</span>
@@ -123,7 +123,7 @@ class ContentSkill extends React.Component<Skill[], Skill[]> {
                             <ul className="skills-list">
                                 <li>
                                 <div className="progress">
-                                    <div className="progress-bar" data-percent="90%" role="progressbar" style={{"width": "90%;"}}>
+                                    <div className="progress-bar" data-percent="90%" role="progressbar" style={{"width": "90%"}}>
                                         <span className="sr-only">90% Complete</span>
                                     </div>
                                     <span className="progress-type">HTML5 / CSS3</span>
@@ -132,7 +132,7 @@ class ContentSkill extends React.Component<Skill[], Skill[]> {
                                 </li>
                                 <li>
                                 <div className="progress">
-                                    <div className="progress-bar progress-bar-2" data-percent="60%" role="progressbar" style={{"width": "60%;"}}>
+                                    <div className="progress-bar progress-bar-2" data-percent="60%" role="progressbar" style={{"width": "60%"}}>
                                         <span className="sr-only">60% Complete</span>
                                     </div>
                                     <span className="progress-type">Javascript</span>
@@ -141,7 +141,7 @@ class ContentSkill extends React.Component<Skill[], Skill[]> {
                                 </li>
                                 <li>
                                 <div className="progress">
-                                    <div className="progress-bar progress-bar-3" data-percent="40%" role="progressbar" style={{"width": "40%;"}}>
+                                    <div className="progress-bar progress-bar-3" data-percent="40%" role="progressbar" style={{"width": "40%"}}>
                                         <span className="sr-only">40% Complete</span>
                                     </div>
                                     <span className="progress-type">PHP</span>

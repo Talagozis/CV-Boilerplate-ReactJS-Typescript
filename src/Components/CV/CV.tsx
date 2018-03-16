@@ -1,20 +1,39 @@
 import * as React from "react";
-/*import "./CV.css";*/
+
 import { Person } from "../../Entities/Person";
 import PageLoader from "./PageLoader";
 import SideMenu from "./SideMenu";
 import Content from "./Content";
 
+// CSS
+import "bootstrap/dist/css/bootstrap.css";
+import "bootstrap/dist/css/bootstrap-theme.css";
+import "font-awesome/css/font-awesome.css";
+import "animate.css";
+import "./vertica.css";
+import "./CV.css";
+
+// JS
+import * as $ from "jquery";
+// tslint:disable-next-line:no-any
+declare var window: any;
+window.jQuery = window.$ = $;
+require("bootstrap");
+require("jquery.nicescroll");
+require("bxslider");
+require("./nivo-lightbox.min.js");
+require("jquery-validation");
+require("./cross-browser");
 
 const baseURL = "me.json";
 
 
 class CV extends React.Component<{}, Person> {
 
-  async componentDidMount() {
-    var person: Person = await this.fetchMembersAsync();
+  async componentWillMount() {
+    await this.fetchMembersAsync().then((person) =>
     // console.log(person);
-    this.setState(person);
+    this.setState(person, () => require("./vertica")));
   }
 
   fetchMembersAsync = (): Promise<Person> => {
@@ -52,11 +71,16 @@ class CV extends React.Component<{}, Person> {
             </div>
           </div>
 
+          <hr />
+          <footer>
+            <p>&copy; 2017 - Talagozis Christos</p>
+          </footer>
+
         </div>
-        
+
       ) : (<div />));
-    
-    }
+
+  }
 }
 
 
