@@ -7,7 +7,7 @@ class ContentEducation extends React.Component<Education[], Education[]> {
         super(educations);
         this.state = educations;
     }
-    public render() {  
+    public render() {
         return (
             <section className="timeline education" id="education">
 
@@ -43,7 +43,7 @@ class ContentEducation extends React.Component<Education[], Education[]> {
                                     {new Intl.DateTimeFormat("en-GB", { 
                                         month: "long",
                                         year: "numeric", 
-                                    }).format(education.graduationDate)}
+                                    }).format(new Date(education.graduationDate))}
                                 </span>
                             </h4>
                             <div className="graduation-description">

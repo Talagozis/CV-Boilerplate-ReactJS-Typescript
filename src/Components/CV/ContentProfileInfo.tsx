@@ -63,7 +63,7 @@ class ContentProfileInfo extends React.Component<Person, Person> {
                                     year: "numeric", 
                                     month: "short", 
                                     day: "2-digit" 
-                                }).format(this.state.dob)} - {this.state.pob}
+                                }).format(new Date(this.state.dob))} - {this.state.pob}
                             </p>
                         </div>
                     </div>
