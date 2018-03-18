@@ -4,7 +4,7 @@ import { Person } from "../../Entities/Person";
 import PageLoader from "./PageLoader";
 import SideMenu from "./SideMenu";
 import Content from "./Content";
-
+import { init1, init2 } from "./vertica.js";
 // CSS
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap/dist/css/bootstrap-theme.css";
@@ -32,9 +32,14 @@ class CV extends React.Component<{}, Person> {
 
   async componentWillMount() {
     await this.fetchMembersAsync().then((person) =>
-    // console.log(person);
-    this.setState(person, () => require("./vertica")));
+      // console.log(person);
+      // this.setState(person, () => require("./vertica")));
+      this.setState(person, () => init1())).then(() => init2());
   }
+  componentDidMount() {
+    // init2();
+  }
+
 
   fetchMembersAsync = (): Promise<Person> => {
     return fetch(baseURL).then((response) => (response.json()));

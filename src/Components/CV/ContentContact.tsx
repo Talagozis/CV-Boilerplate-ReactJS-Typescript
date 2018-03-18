@@ -1,7 +1,50 @@
 import * as React from "react";
+import "jquery-validation";
 
+interface IAjaxResponse {
+    response: string;
+}
 
 class ContentContact extends React.Component {
+     // Contact Form Validator and Ajax Sender
+    validation() {
+        $("#contactForm").validate({
+            submitHandler: function () {
+              $.ajax({
+                type: "POST",
+                url: "php/contact-form.php",
+                data: {
+                  "name": $("#contactForm #name").val(),
+                  "email": $("#contactForm #email").val(),
+                  "subject": $("#contactForm #subject").val(),
+                  "message": $("#contactForm #message").val()
+                },
+                dataType: "json",
+                success: function (data: IAjaxResponse) {
+                  if (data.response === "success") {
+                    $("#contactSuccess").fadeIn(300);
+                    $("#contactError").addClass("hidden");
+      
+                    $("#contactForm #name, #contactForm #email, #contactForm #subject, #contactForm #message")
+                      .val("")
+                      .blur()
+                      .closest(".control-group")
+                      .removeClass("success")
+                      .removeClass("error");
+      
+                  } else {
+                    $("#contactError").fadeIn(300);
+                    $("#contactSuccess").addClass("hidden");
+                  }
+                }
+      
+              });
+            }
+          });
+    }
+    componentDidMount() {
+        this.validation();
+    }
     public render() {
         return (
             <section className="timeline" id="contact">

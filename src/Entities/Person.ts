@@ -26,6 +26,7 @@ export class Person implements IPerson {
     githubLink: string;
     jobTitles: string[];
     description: string;
+    avatar: string;
     educations: Education[];
     workExperience: WorkExperience[];
     researchExperience: ResearchExperience[];

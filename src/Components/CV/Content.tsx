@@ -8,7 +8,7 @@ import ContentProfileInfo from "./ContentProfileInfo";
 // import ContentPortfolio from "./ContentPortfolio";
 import ContentContact from "./ContentContact";
 
-const imageSrc = require("../img/avatar.jpg");
+const imageSrc = require("../img/cv-avatar.jpg");
 
 class Content extends React.Component<Person, Person> {
     constructor(person: Person) {
@@ -16,7 +16,7 @@ class Content extends React.Component<Person, Person> {
         this.state = person;
     }
     getJobTitles(jobTitles: string[]) {
-        return jobTitles.map(jobTitle => <span key={jobTitle}>{jobTitle}</span>).join("/");
+        return jobTitles.map(jobTitle => jobTitle).join(" / ");
     }
     public render() {  
         return (
