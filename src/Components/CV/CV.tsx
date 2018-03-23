@@ -21,9 +21,9 @@ window.jQuery = window.$ = $;
 require("bootstrap");
 require("jquery.nicescroll");
 require("bxslider");
-require("./nivo-lightbox.min.js");
 require("jquery-validation");
-require("./cross-browser");
+require("../../Asserts/js/nivo-lightbox.min.js");
+require("../../Asserts/js/cross-browser");
 
 const baseURL = "me.json";
 

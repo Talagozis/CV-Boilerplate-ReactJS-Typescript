@@ -8,7 +8,7 @@ import ContentProfileInfo from "./ContentProfileInfo";
 // import ContentPortfolio from "./ContentPortfolio";
 import ContentContact from "./ContentContact";
 
-const imageSrc = require("../img/cv-avatar.jpg");
+const imageSrc = require("../../Asserts/img/cv-avatar.jpg");
 
 class Content extends React.Component<Person, Person> {
     constructor(person: Person) {
