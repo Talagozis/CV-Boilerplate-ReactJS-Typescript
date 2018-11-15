@@ -10,9 +10,9 @@
     "jquery": "^3.3.1",
     "jquery-validation": "^1.17.0",
     "jquery.nicescroll": "^3.7.6",
-    "react": "^16.2.0",
+    "react": "^16.6.3",
     "react-dom": "^16.2.0",
-    "react-scripts-ts": "2.13.0"
+    "react-scripts-ts": "^2.17.0"
   },
   "scripts": {
     "start": "react-scripts-ts start",
@@ -21,14 +21,14 @@
     "eject": "react-scripts-ts eject"
   },
   "devDependencies": {
-    "@types/bootstrap": "^3.3.39",
+    "@types/bootstrap": "^3.3.40",
     "@types/dw-bxslider-4": "^4.2.30",
-    "@types/jest": "^22.2.0",
+    "@types/jest": "^22.2.3",
     "@types/jquery": "^3.3.1",
     "@types/jquery.validation": "^1.16.4",
-    "@types/node": "^9.4.7",
+    "@types/node": "^9.6.38",
     "@types/react": "^16.0.40",
     "@types/react-dom": "^16.0.4",
-    "typescript": "^2.7.2"
+    "typescript": "^2.9.2"
   }
 }
